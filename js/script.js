@@ -1,5 +1,15 @@
 let cart = [];
 
+function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+let savedCart = localStorage.getItem("cart");
+
+if (savedCart) {
+    cart = JSON.parse(savedCart);
+}
+
 let products = document.querySelectorAll(".product");
 let buttons = document.querySelectorAll(".add-to-cart");
 let cartItems = document.querySelector("#cart-items");
@@ -11,7 +21,7 @@ let filter = document.querySelector("#filter");
 const calculateTotal = () => {
     let sum = 0;
 
-    cart.forEach(function(item) {
+    cart.forEach(function (item) {
         sum = sum + item.price;
     });
 
@@ -21,7 +31,7 @@ const calculateTotal = () => {
 function showCart() {
     let text = "";
 
-    cart.forEach(function(item, index) {
+    cart.forEach(function (item, index) {
         text = text + (index + 1) + ". " + item.name + " - " + item.price + " руб. ";
         text = text + '<button onclick="removeFromCart(' + index + ')">Удалить</button><br>';
     });
@@ -32,11 +42,12 @@ function showCart() {
 
 function removeFromCart(index) {
     cart.splice(index, 1);
+    saveCart();
     showCart();
 }
 
-buttons.forEach(function(button) {
-    button.addEventListener("click", function() {
+buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
         let product = button.parentElement;
 
         let name = product.dataset.name;
@@ -48,29 +59,32 @@ buttons.forEach(function(button) {
         };
 
         cart.push(item);
+        saveCart();
         showCart();
     });
 });
 
-clearCart.addEventListener("click", function() {
+clearCart.addEventListener("click", function () {
     cart = [];
+    saveCart();
     showCart();
 });
 
-payButton.addEventListener("click", function() {
+payButton.addEventListener("click", function () {
     if (cart.length === 0) {
         alert("Корзина пуста");
     } else {
         alert("Покупка прошла успешно");
         cart = [];
+        saveCart();
         showCart();
     }
 });
 
-filter.addEventListener("change", function() {
+filter.addEventListener("change", function () {
     let category = filter.value;
 
-    products.forEach(function(product) {
+    products.forEach(function (product) {
         if (category === "all") {
             product.style.display = "block";
         } else if (product.dataset.category === category) {
@@ -80,3 +94,4 @@ filter.addEventListener("change", function() {
         }
     });
 });
+showCart();
