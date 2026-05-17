@@ -1,0 +1,110 @@
+body {
+    background-color: rgb(220, 230, 240);
+}
+
+/* меню */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: blue;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* заголовки на странице товара */
+h2 {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: rgb(220, 220, 220);
+}
+
+
+/* краткое описание */
+.short {
+    color: rgb(60, 60, 60);
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+
+/* подробное описание */
+.full {
+    color: rgb(80, 80, 80);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+/* список характеристик */
+.features {
+    color: darkblue;
+    font-size: 16px;
+    list-style-image: url("../img/icon.png");
+    padding-left: 25px;
+}
+
+/* Десептиконы */
+.decepticon {
+    background-color: rgb(35, 35, 45);
+}
+
+.decepticon a {
+    color: rgb(200, 160, 255);
+}
+
+.decepticon h2 {
+    color: rgb(240, 240, 240);
+    background-color: rgb(70, 20, 20);
+}
+
+.decepticon .short:hover {
+    color: rgb(210, 180, 180);
+}
+
+.decepticon .full {
+    color: rgb(220, 220, 220);
+}
+
+.decepticon .features {
+    color: rgb(255, 200, 200);
+}
+
+.decepticon h1 {
+    color: white;
+}
+
+.decepticon footer {
+    color: white;
+}
+
+/* Автоботы */
+.autobot {
+    background-color: rgb(220, 235, 255);
+}
+
+.autobot a {
+    color: rgb(30, 90, 200);
+}
+
+.autobot h2 {
+    color: rgb(20, 40, 80);
+    background-color: rgb(200, 220, 255);
+}
+
+.autobot .short {
+    color: rgb(70, 90, 120);
+}
+
+.autobot .full {
+    color: rgb(50, 70, 100);
+}
+
+.autobot .features {
+    color: rgb(20, 80, 180);
+}

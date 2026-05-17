@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+    </ul>
+
+    <hr>
+
+    <h1>Каталог фигурок Transformers</h1>
+    <p class="full">Выберите персонажа из фильмов Майкла Бэя и добавьте товар в корзину.</p>
+
+    <h2>Фильтр по фракции</h2>
+    <select id="filter">
+        <option value="all">Все</option>
+        <option value="autobot">Автоботы</option>
+        <option value="decepticon">Десептиконы</option>
+    </select>
+
+    <hr>
+
+    <div class="product" data-name="Фигурка Оптимус Прайм" data-price="5000" data-category="autobot">
+        <img src="img/item.jpg" width="200" alt="Фигурка Оптимус Прайм">
+        <br>
+        <a href="optimus.html">Фигурка Оптимус Прайм</a>
+        <p>Цена: 5000 руб.</p>
+        <button class="add-to-cart">Добавить в корзину</button>
+    </div>
+
+    <br><br>
+
+    <div class="product" data-name="Фигурка Бамблби" data-price="3500" data-category="autobot">
+        <img src="img/img2.jpg" width="200" alt="Фигурка Бамблби">
+        <br>
+        <a href="bumblebee.html">Фигурка Бамблби</a>
+        <p>Цена: 3500 руб.</p>
+        <button class="add-to-cart">Добавить в корзину</button>
+    </div>
+
+    <br><br>
+
+    <div class="product" data-name="Фигурка Мегатрон" data-price="6000" data-category="decepticon">
+        <img src="img/megatron.jpg" width="200" alt="Фигурка Мегатрон">
+        <br>
+        <a href="megatron.html">Фигурка Мегатрон</a>
+        <p>Цена: 6000 руб.</p>
+        <button class="add-to-cart">Добавить в корзину</button>
+    </div>
+
+    <br><br>
+
+    <div class="product" data-name="Фигурка Старскрим" data-price="4200" data-category="decepticon">
+        <img src="img/starscream.jpg" width="200" alt="Фигурка Старскрим">
+        <br>
+        <a href="starscream.html">Фигурка Старскрим</a>
+        <p>Цена: 4200 руб.</p>
+        <button class="add-to-cart">Добавить в корзину</button>
+    </div>
+
+    <hr>
+
+    <h2>Корзина</h2>
+    <div id="cart-items"></div>
+    <p id="total">Итого: 0 руб.</p>
+    <button id="clear-cart">Очистить корзину</button>
+    <button id="pay-btn">Оплатить</button>
+
+    <hr>
+
+    <footer>
+        <p>&copy; Все права защищены</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
